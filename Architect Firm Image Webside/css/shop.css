@@ -1,0 +1,381 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* 叉叉按鈕 */
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 30px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+/* 導覽列圖片 */
+.firstImage {
+    margin-left: 20px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    width: 200px;
+    height: 45px;
+}
+
+/* 導覽列內容 */
+.navContent {
+    position: relative;
+    top: 50px;
+    left: 20px;
+    width: 200px;
+    height: 200px;
+    background-color: #f50000;
+}
+
+.nav-item>a {
+    scale: 100%;
+    transition: 0.2s;
+    z-index: 1;
+}
+
+.nav-item>a:hover {
+    scale: 117%;
+}
+
+/* 輪播圖 */
+.carousel-item>img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+}
+
+/* 視差內容 */
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font: 400 15px/1.8 "Lato", sans-serif;
+    color: #777;
+}
+
+.bgimg-1,
+.bgimg-2,
+.bgimg-3 {
+    position: relative;
+    opacity: 0.8;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.bgimg-1 {
+    background-image: url("../img/1.jpg");
+    min-height: 100vh;
+}
+
+.bgimg-2 {
+    background-image: url("../img/2.jpg");
+    min-height: 100vh;
+}
+
+.bgimg-3 {
+    background-image: url("../Product/Landscape/Landscape14.jpg");
+    min-height: 100vh;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+.caption span.Myborder {
+    border: 2px solid white;
+    color: rgba(255, 255, 255);
+    padding: 22px;
+    font-size: 27px;
+    letter-spacing: 4px;
+}
+
+h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px "Lato", sans-serif;
+    color: #111;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+
+/* icon變色 */
+i:hover {
+    color: lightcyan;
+}
+
+/* TOP置頂按鈕 */
+.MyTop {
+    position: fixed;
+    /* 與右側距離為0 */
+    right: 0;
+    /* 與底部距離為0 */
+    bottom: 0;
+    background-color: transparent;
+    margin-right: -15px;
+    margin-bottom: 40px;
+}
+
+.MyTop img {
+    width: 80px;
+    opacity: 0.6;
+}
+
+/* 卡片 */
+.MYcardALink {
+    text-decoration: none;
+    color: #666;
+    box-sizing: border-box;
+}
+
+.MYcardALink:link {
+    color: #666;
+}
+
+.MYcardALink:visited {
+    color: #666;
+}
+
+.Mycard {
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0.1, 0.1); */
+    border: 1px solid rgb(245, 245, 245);
+    transition: 0.3s;
+    /* width: 45%; */
+}
+
+.MYCardcontainer>img {
+    margin-bottom: 20px;
+}
+
+.Mycard:hover {
+    box-shadow: 0 8px 16px 0 rgba(1, 0, 0.1, 0.3);
+    scale: 103%;
+    border: none;
+}
+
+.MYCardcontainer {
+    /* padding: 10px; */
+    padding-bottom: 10px;
+}
+
+.MyCardcontainerText {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    padding: 0 15px;
+    text-align: justify;
+}
+
+
+/* 商品導覽列 */
+.shop-nav {
+    background-color: rgb(100, 100, 100, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    /* margin: auto; */
+    width: 100%;
+}
+
+.shop-nav a {
+    display: flex;
+    color: #ffffff;
+    text-decoration: none;
+    /* background-color: rgb(72, 72, 72, 0.8); */
+    height: 100%;
+    /* width: 33%; */
+    text-align: center;
+    /* justify-content: center; */
+    align-items: center;
+    white-space: nowrap;
+    padding: 0 55px;
+}
+
+.shop-nav a {
+    /* background-color: rgba(164, 164, 164, 0.5); */
+    color: #ffffff;
+    transition: 0.2s;
+    scale: 100%;
+}
+
+.shop-nav a:hover {
+    /* background-color: rgba(164, 164, 164, 0.5); */
+    color: #ffffff;
+    scale: 120%;
+}
+
+
+/* 底部商品導覽列 */
+#MyShopBottomBar {
+    display: none;
+}
+
+/* 左側欄-可折疊樣式: */
+.LeftBarcollapsible {
+    background-color: #ffffff;
+    color: rgb(97, 97, 97);
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-bottom: 1px solid rgb(193, 193, 193);
+    scale: 100%;
+    transition: 0.2s;
+}
+
+.LeftBarcollapsible:hover {
+    scale: 110%;
+
+}
+
+.LeftBarcollapsible>span {
+    display: inline-block;
+    padding: 0.5px;
+    transition: 0.2s;
+}
+
+/* 觸碰效果 */
+.LeftBarcollapsible>span:hover {
+    /* background-color: #bfbfbf;
+    color: rgb(255, 255, 255); */
+    scale: 115%;
+
+}
+
+/* + 號 */
+.LeftBarcollapsible:after {
+    content: '\002B';
+    color: rgb(97, 97, 97);
+    font-weight: bold;
+    float: right;
+    margin-left: 18px;
+}
+
+/* - 號 */
+#LeftBarcollapsible.active:after {
+    content: "\2212";
+    color: rgb(97, 97, 97);
+}
+
+/* 內容 */
+.LeftBarcontent {
+    /* padding: 0 18px; */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #ffffff;
+    margin-bottom: 1px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.LeftBarcontent>div>div>a.active {
+    text-decoration: none;
+    color: rgb(97, 97, 97);
+}
+
+.LeftBarcontent>div>div>a {
+    text-decoration: none;
+    color: rgb(97, 97, 97);
+
+}
+
+.LeftBarcontent>div>div>a>p {
+    scale: 100%;
+    transition: 0.2s;
+}
+
+.LeftBarcontent>div>div>a>p:hover {
+    scale: 115%;
+}
+
+.LeftBarcontent>div {
+    border: 1px solid bl;
+}
+
+@media only screen and (max-width: 768px) {
+    .LeftBar {
+        display: none;
+    }
+}
+
+/* 彈出商品視窗 */
+#ShopPrice {
+    color: rgb(154, 68, 68);
+    font-size: 23px;
+}
+
+.ShopButton {
+    scale: 100%;
+    margin: 3px 3px;
+    border: none;
+    padding: 5px;
+    transition: 0.2s;
+    border-radius: 5px;
+    /* width: 50px; */
+}
+
+.ShopButton:hover {
+    scale: 110%;
+    background-color: #9e9e9e;
+    color: white;
+}
+
+#ShopInput {
+    width: 120px;
+    text-align: center;
+    border: 1px solid lightgray;
+    color: #777;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#ShopInput:focus {
+    border: none;
+    background-color: rgb(240, 240, 240);
+    color: #777;
+}

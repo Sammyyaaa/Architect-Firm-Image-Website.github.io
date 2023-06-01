@@ -1,0 +1,666 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 叉叉按鈕 */
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 30px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+/* 導覽列圖片 */
+.firstImage {
+    margin-left: 20px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    width: 200px;
+    height: 45px;
+}
+
+/* 導覽列內容 */
+.navContent {
+    position: relative;
+    top: 50px;
+    left: 20px;
+    width: 200px;
+    height: 200px;
+    background-color: #f50000;
+}
+
+.nav-item>a {
+    scale: 100%;
+    transition: 0.2s;
+}
+
+.nav-item>a:hover {
+    scale: 117%;
+}
+
+/* 輪播圖 */
+.carousel-item>img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+}
+
+
+/* 視差內容 */
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font: 400 15px/1.8 "Lato", sans-serif;
+    color: #777;
+}
+
+.bgimg-1,
+.bgimg-2,
+.bgimg-3,
+.bgimg-4,
+.bgimg-5 {
+    position: relative;
+    opacity: 0.8;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.bgimg-1 {
+    background-image: url("../Product/Architect/Architect9.jpg");
+    min-height: 100vh;
+}
+
+.bgimg-2 {
+    background-image: url("../Product/Landscape/Landscape15.jpg");
+    min-height: 100vh;
+}
+
+.bgimg-3 {
+    background-image: url("../Product/Architect/Architect5.jpg");
+    min-height: 100vh;
+}
+
+.bgimg-4 {
+    background-image: url("../Product/Landscape/Landscape10.jpg");
+    min-height: 100vh;
+}
+
+.bgimg-5 {
+    background-image: url("../Product/Landscape/Landscape16.jpg");
+    min-height: 100vh;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    /* color: #000; */
+}
+
+.caption span.Myborder {
+    border: 2px solid white;
+    color: rgba(255, 255, 255);
+    padding: 22px;
+    font-size: 27px;
+    letter-spacing: 4px;
+}
+
+h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px "Lato", sans-serif;
+    color: #111;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3,
+    .bgimg-4,
+    .bgimg-5 {
+        background-attachment: scroll;
+    }
+}
+
+/* icon變色 */
+i:hover {
+    color: lightcyan;
+}
+
+/* TOP置頂按鈕 */
+.MyTop {
+    position: fixed;
+    /* 與右側距離為0 */
+    right: 0;
+    /* 與底部距離為0 */
+    bottom: 0;
+    background-color: transparent;
+    margin-right: -15px;
+    margin-bottom: 40px;
+}
+
+/* TOP置頂按鈕-圖片 */
+.MyTop img {
+    width: 80px;
+    opacity: 0.6;
+}
+
+/* 新聞標題超出顯示 */
+.NewsTitleEllipsis {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+/* 新聞內容超出顯示 */
+.NewsTextEllipsis {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+/* 新聞處碰陰影效果 */
+.MyCard {
+    box-shadow: rgb(222, 222, 222) 0px 0px 0px 0px;
+    scale: 100%;
+    transition: box-shadow 0.3s ease;
+    transition: scale 0.3s ease;
+}
+
+.MyCard:hover {
+    box-shadow: rgb(222, 222, 222) 0px 0px 10px 1px;
+    scale: 105%;
+    transition: 0.3s;
+}
+
+/* 滾輪條 */
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(205, 205, 205);
+    border-radius: 7px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(183, 183, 183);
+    border-radius: 7px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #767676;
+}
+
+/* 建築設計介紹-電腦顯示 */
+@media only screen and (min-device-width: 768px) {
+    .ArchitecturalImgCaseCase {
+        width: 100vw;
+        height: 350px;
+    }
+
+    .ArchitecturalImgCase {
+        position: relative;
+        z-index: 1;
+    }
+
+    .ArchitecturalImg {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 40px;
+        left: 20px;
+    }
+
+    .ArchitecturalContentCase {
+        position: relative;
+    }
+
+    .ArchitecturalContent {
+        height: 100%;
+        width: 100%;
+        color: rgb(50, 50, 50);
+        background-color: rgb(232, 232, 232);
+        text-align: justify;
+        padding-right: 15px;
+        position: absolute;
+        top: 0px;
+        left: -20px;
+    }
+
+    .ArchitecturalContent-h3 {
+        position: absolute;
+        left: 55px;
+        top: 35px;
+        color: rgb(50, 50, 50);
+        text-align: center;
+    }
+
+    .ArchitecturalContent-P {
+        position: absolute;
+        right: 0;
+        left: 35px;
+        font-size: 16px;
+        margin: 20px;
+    }
+
+    .ArchitecturalContent-ImgOne {
+        position: absolute;
+        right: 40px;
+        top: 260px;
+        width: 180px;
+        display: block;
+    }
+
+    .ArchitecturalContent-ImgTwo {
+        position: absolute;
+        right: 195px;
+        top: 190px;
+        width: 120px;
+        display: block;
+    }
+}
+
+/* 建築設計介紹-平板手機顯示 */
+@media only screen and (max-width: 768px) {
+    .ArchitecturalImgCaseCase {
+        width: 100%;
+        height: 500px;
+    }
+
+    .ArchitecturalImgCase {
+        position: relative;
+        z-index: 1;
+    }
+
+    .ArchitecturalImg {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        /* border-radius: 15px; */
+        top: 0px;
+        left: 30px;
+    }
+
+    .ArchitecturalContentCase {
+        position: relative;
+    }
+
+    .ArchitecturalContent {
+        height: 100%;
+        width: 100%;
+        color: rgb(50, 50, 50);
+        background-color: rgb(232, 232, 232);
+        text-align: justify;
+        padding-right: 15px;
+        position: absolute;
+        top: -30px;
+        left: -10px;
+        /* border-radius: 15px; */
+    }
+
+    .ArchitecturalContent-h3 {
+        position: absolute;
+        left: 30px;
+        top: 50px;
+        color: rgb(50, 50, 50);
+        text-align: center;
+    }
+
+    .ArchitecturalContent-P {
+        position: absolute;
+        top: 65px;
+        right: 0;
+        left: 10px;
+        font-size: 16px;
+        margin: 20px;
+    }
+
+    .ArchitecturalContent-ImgOne {
+        /* display: none; */
+        position: absolute;
+        right: 70px;
+        top: 230px;
+        width: 145px;
+        display: block;
+
+    }
+
+    .ArchitecturalContent-ImgTwo {
+        /* display: none; */
+        position: absolute;
+        right: -30px;
+        top: 190px;
+        width: 90px;
+        display: block;
+    }
+}
+
+/* 景觀設計介紹-電腦顯示 */
+@media only screen and (min-device-width: 768px) {
+    .LandscapeImgCaseCase {
+        width: 100vw;
+        height: 350px;
+    }
+
+    .LandscapeImgCase {
+        position: relative;
+        z-index: 1;
+    }
+
+    .LandscapeImg {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 40px;
+        left: -20px;
+        ;
+    }
+
+    .LandscapeContentCase {
+        position: relative;
+    }
+
+    .LandscapeContent {
+        height: 100%;
+        width: 100%;
+        color: rgb(50, 50, 50);
+        background-color: rgb(232, 232, 232);
+        text-align: justify;
+        padding-right: 15px;
+        position: absolute;
+        top: 0px;
+        left: 30px;
+    }
+
+    .LandscapeContent-h3 {
+        position: absolute;
+        right: 70px;
+        top: 35px;
+        color: rgb(50, 50, 50);
+        text-align: center;
+    }
+
+    .LandscapeContent-P {
+        position: absolute;
+        right: 55px;
+        left: 15px;
+        font-size: 16px;
+        margin: 20px;
+    }
+
+    .LandscapeContent-ImgOne {
+        position: absolute;
+        left: -35px;
+        top: 190px;
+        width: 125px;
+        display: block;
+    }
+
+    .LandscapeContent-ImgTwo {
+        position: absolute;
+        left: -40px;
+        top: 205px;
+        width: 120px;
+        display: block;
+    }
+}
+
+/* 景觀設計介紹-平板手機顯示 */
+@media only screen and (max-width: 768px) {
+    .LandscapeImgCaseCase {
+        width: 100%;
+        height: 500px;
+    }
+
+    .LandscapeImgCase {
+        position: relative;
+        z-index: 1;
+    }
+
+    .LandscapeImg {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        /* border-radius: 15px; */
+        top: -255px;
+        left: -10px;
+    }
+
+    .LandscapeContentCase {
+        position: relative;
+    }
+
+    .LandscapeContent {
+        height: 100%;
+        width: 100%;
+        color: rgb(50, 50, 50);
+        background-color: rgb(232, 232, 232);
+        text-align: justify;
+        padding-right: 15px;
+        position: absolute;
+        top: 210px;
+        left: 30px;
+        /* border-radius: 15px; */
+    }
+
+    .LandscapeContent-h3 {
+        position: absolute;
+        left: 30px;
+        top: 50px;
+        color: rgb(50, 50, 50);
+        text-align: center;
+    }
+
+    .LandscapeContent-P {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        left: 10px;
+        font-size: 16px;
+        margin: 20px;
+    }
+
+    .LandscapeContent-ImgOne {
+        /* display: none; */
+        position: absolute;
+        right: 0px;
+        left: 100px;
+        top: 235px;
+        width: 145px;
+        display: block;
+
+    }
+
+    .LandscapeContent-ImgTwo {
+        /* display: none; */
+        position: absolute;
+        right: 0px;
+        left: -55px;
+        top: 180px;
+        width: 100px;
+        display: block;
+    }
+}
+
+/* 室內設計介紹-電腦顯示 */
+@media only screen and (min-device-width: 768px) {
+    .InteriorImgCaseCase {
+        width: 100vw;
+        height: 350px;
+    }
+
+    .InteriorImgCase {
+        position: relative;
+        z-index: 1;
+    }
+
+    .InteriorImg {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 50px;
+        left: 20px;
+    }
+
+    .InteriorContentCase {
+        position: relative;
+    }
+
+    .InteriorContent {
+        height: 100%;
+        width: 100%;
+        color: rgb(50, 50, 50);
+        background-color: rgb(232, 232, 232);
+        text-align: justify;
+        padding-right: 15px;
+        position: absolute;
+        top: 0px;
+        left: -30px;
+    }
+
+    .InteriorContent-h3 {
+        position: absolute;
+        left: 75px;
+        top: 45px;
+        color: rgb(50, 50, 50);
+        text-align: center;
+    }
+
+    .InteriorContent-P {
+        position: absolute;
+        right: 0;
+        left: 55px;
+        font-size: 16px;
+        margin: 20px;
+        top: 65px;
+    }
+
+    .InteriorContent-ImgOne {
+        position: absolute;
+        right: -45px;
+        top: 300px;
+        width: 140px;
+        display: block;
+    }
+
+    .InteriorContent-ImgTwo {
+        position: absolute;
+        right: -10px;
+        top: 220px;
+        width: 200px;
+        display: block;
+    }
+}
+
+/* 室內設計介紹-平板手機顯示 */
+@media only screen and (max-width: 768px) {
+    .InteriorImgCaseCase {
+        width: 100%;
+        height: 500px;
+    }
+
+    .InteriorImgCase {
+        position: relative;
+        z-index: 1;
+    }
+
+    .InteriorImg {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        /* border-radius: 15px; */
+        top: 0px;
+        left: 35px;
+    }
+
+    .InteriorContent {
+        height: 100%;
+        width: 100%;
+        color: rgb(50, 50, 50);
+        background-color: rgb(232, 232, 232);
+        text-align: justify;
+        padding-right: 15px;
+        position: absolute;
+        top: -40px;
+        left: -10px;
+        /* border-radius: 15px; */
+    }
+
+    .InteriorContent-h3 {
+        position: absolute;
+        left: 30px;
+        top: 50px;
+        color: rgb(50, 50, 50);
+        text-align: center;
+    }
+
+    .InteriorContent-P {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        left: 10px;
+        font-size: 16px;
+        margin: 20px;
+    }
+
+    .InteriorContent-ImgOne {
+        /* display: none; */
+        position: absolute;
+        right: -50px;
+        top: 255px;
+        width: 130px;
+        display: block;
+
+    }
+
+    .InteriorContent-ImgTwo {
+        /* display: none; */
+        position: absolute;
+        right: -20px;
+        top: 190px;
+        width: 180px;
+        display: block;
+    }
+}

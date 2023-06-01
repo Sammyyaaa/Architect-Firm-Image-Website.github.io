@@ -1,0 +1,249 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="./bootstrap_css/bootstrap.css">
+    <script src="./js/bootstrap.bundle.js"></script>
+    <!-- icon -->
+    <link href="./Icon.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/Project.css">
+</head>
+
+<body>
+    <!-- 導覽列整體 -->
+    <div
+        style="display: flex; background-color: rgb(255, 255, 255); box-sizing: border-box; position: fixed; z-index: 1000; width: 100%;">
+        <!-- 導覽列圖片連結 -->
+        <div class="bg-lightred" style="width: 250px; display: inline-block; box-sizing: border-box">
+            <a href="./index.html">
+                <img src="./BarImg.png" class="firstImage" alt="" style="width: 240px;">
+            </a>
+        </div>
+        <!-- 我只是把按鈕推到右邊 -->
+        <span style="margin-right: auto;"></span>
+        <!-- 導覽列-內容 -->
+        <div class="navbar navbar-expand-md w-100" style="display: inline-block;  width: 150px; height: 100%;">
+            <div class="container-fluid" style="position: relative;">
+                <div class="navbar-brand">
+                    <a class="navbar-brand" href="#"></a>
+                </div>
+                <!-- 導覽列按鈕 -->
+                <div style="margin: 15px 0; position: relative; top:5px; right: 15px;">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation" style="position: absolute; right : 0px;">
+                        <!-- 叉叉按鈕型式 -->
+                        <div class="container" onclick="myFunction(this)">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                    </button>
+                </div>
+                <script>
+                    function myFunction(x) {
+                        x.classList.toggle("change");
+                    }
+                </script>
+
+
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-right: 5px;">
+                    <!-- 推到右邊 -->
+                    <span style="margin-right: auto;"></span>
+                    <!-- 導覽列項目文字 -->
+                    <div class="navbar-nav RwdNavBar mt-md-1"
+                        style="padding-top: 20px; white-space: nowrap; margin-top: 40px; float: right;">
+                        <div class="nav-item nav-hover" style="width: 100px; text-align: center; height: 100%;">
+                            <a class="nav-link active dropdown-item" aria-current="page" href="./About.html"
+                                style="margin-top: 0px;"><b>關於我們</b></a>
+                        </div>
+                        <div class="nav-item nav-hover " style="width: 100px; text-align: center; height: 100%;">
+                            <a class="nav-link active" aria-current="page" href="./Project.html"
+                                style="margin-top: 0px;"><b>經典作品</b></a>
+                        </div>
+                        <div class="nav-item nav-hover" style="width: 100px; text-align: center; height: 100%;">
+                            <a class="nav-link active" aria-current="page" href="./Service.html"
+                                style="margin-top: 0px;"><b>服務內容</b></a>
+                        </div>
+                        <div class="nav-item nav-hover" style="width: 100px; text-align: center; height: 100%;">
+                            <a class="nav-link active" aria-current="page" href="./Contact.html"
+                                style="margin-top: 0px;"><b>聯絡諮詢</b></a>
+                        </div>
+                        <div class="nav-item nav-hover" style="width: 100px; text-align: center; height: 100%;">
+                            <a class="nav-link active" aria-current="page" href="./Shop.html"
+                                style="margin-top: 0px;"><b>建材批售</b></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 往下推85px -->
+    <!-- <div style="height: 85px;"></div> -->
+
+    <!-- 視差內容 -->
+    <div class="bgimg-1">
+        <div class="caption">
+            <span class="Myborder" style="font-size: 28px;">Classic Product</span>
+        </div>
+    </div>
+
+
+    <!-- 點擊開啟圖片 -->
+    <!-- 第一欗 -->
+    <div id="Myoverlay" onclick="off()">
+        <img id="MyBackgroundImg" src="./Product/Landscape/Landscape1.jpg">
+    </div>
+
+    <!-- 經典作品 -->
+    <div style="color: #777;background-color:white;text-align:center;padding:50px 50px;text-align: justify;">
+        <h3 style="text-align:center;"><b>經典作品</b></h3>
+        <p style="text-align:center;"><b>Classic Product</b></p>
+
+        <!-- 經典作品內容 -->
+        <!-- Photo Grid -->
+        <div class="Myrow">
+            <div class="Mycolumn">
+                <img onclick="on()" class="Imghover" src="./Product/Landscape/Landscape1.jpg" style="width:100%; cursor: pointer;">
+                <img class="Imghover" src="./Product/Landscape/Landscape2.jpg" style="width:100%; cursor: pointer;">
+                <img class="Imghover" src="./Product/Landscape/Landscape3.jpg" style="width:100%; cursor: pointer;">
+                <img class="Imghover" src="./Product/Landscape/Landscape4.jpg" style="width:100%; cursor: pointer;">
+                <img class="Imghover" src="./Product/Landscape/Landscape5.jpg" style="width:100%; cursor: pointer;">
+                <img class="Imghover" src="./Product/Landscape/Landscape6.jpg" style="width:100%; cursor: pointer;">
+                <img class="Imghover" src="./Product/Landscape/Landscape7.jpg" style="width:100%; cursor: pointer;">
+            </div>
+            <div class="Mycolumn">
+                <img class="Imghover" src="./Product/Landscape/Landscape9.jpg" style="width:100%; cursor: pointer;">
+                <img class="Imghover" src="./Product/Landscape/Landscape8.jpg" style="width:100%; cursor: pointer;">
+                <img class="Imghover" src="./Product/Landscape/Landscape10.jpg" style="width:100%; cursor: pointer;">
+                <img class="Imghover" src="./Product/Landscape/Landscape11.jpg" style="width:100%; cursor: pointer;">
+                <img class="Imghover" src="./Product/Landscape/Landscape12.jpg" style="width:100%; cursor: pointer;">
+                <img class="Imghover" src="./Product/Landscape/Landscape13.jpg" style="width:100%; cursor: pointer;">
+                <img class="Imghover" src="./Product/Landscape/Landscape17.jpg" style="width:100%; cursor: pointer;">
+            </div>
+            <div class="Mycolumn">
+                <img class="Imghover" src="./Product/Architect/Architect1.jpg" style="width:100%; cursor: pointer;">
+                <img class="Imghover" src="./Product/Architect/Architect2.jpg" style="width:100%; cursor: pointer;">
+                <img class="Imghover" src="./Product/Architect/Architect3.jpg" style="width:100%; cursor: pointer;">
+                <img class="Imghover" src="./Product/Architect/Architect10.jpg" style="width:100%; cursor: pointer;">
+                <img class="Imghover" src="./Product/Architect/Architect5.jpg" style="width:100%; cursor: pointer;">
+                <img class="Imghover" src="./Product/Architect/Architect4.jpg" style="width:100%; cursor: pointer;">
+                <img class="Imghover" src="./Product/Architect/Architect8.jpg" style="width:100%; cursor: pointer;">
+                <img class="Imghover" src="./Product/Architect/Architect6.jpg" style="width:100%; cursor: pointer;">
+
+
+            </div>
+            <div class="Mycolumn">
+                <img class="Imghover" src="./Product/Landscape/Landscape15.jpg" style="width:100%; cursor: pointer;">
+                <img class="Imghover" src="./Product/Landscape/Landscape20.jpg" style="width:100%; cursor: pointer;">
+                <img class="Imghover" src="./Product/Landscape/Landscape21.jpg" style="width:100%; cursor: pointer;">
+                <img class="Imghover" src="./Product/Landscape/Landscape18.jpg" style="width:100%; cursor: pointer;">
+                <img class="Imghover" src="./Product/Landscape/Landscape19.jpg" style="width:100%; cursor: pointer;">
+                <img class="Imghover" src="./Product/Landscape/Landscape14.jpg" style="width:100%; cursor: pointer;">
+                <img class="Imghover" src="./Product/Landscape/Landscape16.jpg" style="width:100%; cursor: pointer;">
+                <img class="Imghover" src="./Product/Landscape/Landscape22.jpg" style="width:100%; cursor: pointer;">
+            </div>
+        </div>
+
+        <script>
+            function on() {
+                document.getElementById("Myoverlay").style.display = "block";
+            }
+
+            function off() {
+                document.getElementById("Myoverlay").style.display = "none";
+            }
+        </script>
+
+        <!-- <div style="color: #777;background-color:white;text-align:center;padding:50px 50px;text-align: justify;">
+        <h3 style="text-align:center;"><b>經典作品</b></h3>
+        <p style="text-align:center;"><b>Product</b></p>
+    
+
+        <div
+            style=" background-color: rgb(241, 241, 241); box-sizing: border-box; border-radius: 15px; overflow:hidden;">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="row">
+                        <div class="col-12" style="text-align: justify; padding-right: 15px;">
+                            <br>
+                            <h3 style="text-align: center;">公司介紹</h3>
+                            <p style="font-size: 16px; margin: 20px;">
+                                提供建築&室設&景觀整合及各別之設計能力的建築師事務所，設計宗旨以人為本，將人文、藝術以及最重要的與〝人的生活節奏〞緊密結合量身打造出專屬於使用者需求的空間氛圍，使建築與室內空間不單單僅是居住或使用的空間容器，而是由內到外富含藝術涵養與生活便利的室內外空間美學，以此將戶外建築、景觀到室內空間，創造出整體性生活空間的對話狀態，產生更為舒適與滿足的室內外空間氛圍。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 h-md-25">
+                    <img src="./img/office.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </div> -->
+    </div>
+    <!-- 視差內容 -->
+    <div class="bgimg-3">
+        <div class="caption">
+            <span class="Myborder" style="background-color:transparent;font-size:25px;color: #f7f7f7;">Comfort
+                Experience</span>
+        </div>
+    </div>
+
+    <!-- 頁尾 -->
+    <div
+        style="color:#848484;background-color:rgb(224, 224, 224, 0.5);text-align:center;padding:50px 50px;text-align: justify;">
+        <!-- 最後訊息欄 -->
+        <!-- 地圖&聯絡方式 -->
+        <div class="row">
+            <div class="col-12 col-md-6 h-md-25">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.428944344554!2d120.6347276!3d24.156684999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693de8e0f265f3%3A0x89046fd19e171255!2z5Lit6I-v6Zu75L-h5a246Zmi6buO5piO5pyD6aSo!5e0!3m2!1szh-TW!2stw!4v1676133649747!5m2!1szh-TW!2stw"
+                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div style="font-size: 14px; text-align: center;">
+                    <p style="margin-top: 5px;">建築設計 | 室內裝修 | 景觀規劃 | 危老建築都更 | 土地開發興建 | 老屋重新翻修</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="row">
+                    <div class="col-12"
+                        style="text-align: justify; padding-right: 15px; text-align: center; margin-top: 5px;">
+                        <br>
+                        <h6 style="text-align: center; white-space: nowrap">統編：04-2327-3572</h6>
+                        <h6 style="text-align: center; white-space: nowrap">電話：04-2326-5860</h6>
+                        <h6 style="text-align: center; white-space: nowrap">手機：0988664422</h6>
+                        <h6 style="text-align: center; white-space: nowrap">信箱：Sitdownplz0222@gmail.com.tw</h6>
+                        <h6 style="text-align: center; white-space: nowrap">地址：台中市南屯區黎明路二段658號</h6>
+                        <br>
+                        <i id="icon" class="bi bi-line"
+                            style="font-size: 40px; margin-right: 15px; cursor: pointer;"></i>
+                        <i id="icon" class="bi bi-facebook"
+                            style="font-size: 40px; margin-right: 15px; cursor: pointer;"></i>
+                        <i id="icon" class="bi bi-twitter"
+                            style="font-size: 40px; margin-right: 15px; cursor: pointer;"></i>
+                        <i id="icon" class="bi bi-youtube"
+                            style="font-size: 40px; margin-right: 15px; cursor: pointer;"></i>
+                        <i id="icon" class="bi bi-instagram" style="font-size: 40px; cursor: pointer;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOP至頂 -->
+    <div class="demo">
+        <!-- <a>雖然是行內元素，但他是特別的存在 -->
+        <div class="MyTop"><a href="#"><img src="./img/TOP.png"></a>
+        </div>
+    </div>
+
+</body>
+
+</html>

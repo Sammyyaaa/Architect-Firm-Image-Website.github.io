@@ -1,0 +1,500 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>設計公司首頁</title>
+    <link rel="stylesheet" href="./bootstrap_css/bootstrap.css">
+    <script src="./js/bootstrap.bundle.js"></script>
+    <!-- icon -->
+    <link href="./Icon.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <!-- 導覽列整體 -->
+    <div
+        style="display: flex; background-color: rgb(255, 255, 255); box-sizing: border-box; position: fixed; z-index: 1000; width: 100%;">
+        <!-- 導覽列圖片連結 -->
+        <div class="bg-lightred" style="width: 250px; display: inline-block; box-sizing: border-box">
+            <a href="./index.html">
+                <img src="./BarImg.png" class="firstImage" alt="" style="width: 240px;">
+            </a>
+        </div>
+        <!-- 我只是把按鈕推到右邊 -->
+        <span style="margin-right: auto;"></span>
+        <!-- 導覽列-內容 -->
+        <div class="navbar navbar-expand-md w-100" style="display: inline-block;  width: 150px; height: 100%;">
+            <div class="container-fluid" style="position: relative;">
+                <div class="navbar-brand">
+                    <a class="navbar-brand" href="#"></a>
+                </div>
+                <!-- 導覽列按鈕 -->
+                <div style="margin: 15px 0; position: relative; top:5px; right: 15px;">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation" style="position: absolute; right : 8vw;">
+                        <!-- 叉叉按鈕型式 -->
+                        <div class="container" onclick="myFunction(this)">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                    </button>
+                </div>
+                <script>
+                    function myFunction(x) {
+                        x.classList.toggle("change");
+                    }
+                </script>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-right: 5px;">
+                    <!-- 推到右邊 -->
+                    <span style="margin-right: auto;"></span>
+                    <!-- 導覽列項目文字 -->
+                    <div class="navbar-nav RwdNavBar mt-md-1"
+                        style="padding-top: 20px; white-space: nowrap; margin-top: 40px; float: right; padding-right: 10%;">
+                        <div class="nav-item nav-hover" style="width: 100px; text-align: center; height: 100%;">
+                            <a class="nav-link active dropdown-item" aria-current="page" href="./About.html"
+                                style="margin-top: 0px;"><b>關於我們</b></a>
+                        </div>
+                        <div class="nav-item nav-hover " style="width: 100px; text-align: center; height: 100%;">
+                            <a class="nav-link active" aria-current="page" href="./Project.html"
+                                style="margin-top: 0px;"><b>經典作品</b></a>
+                        </div>
+                        <div class="nav-item nav-hover" style="width: 100px; text-align: center; height: 100%;">
+                            <a class="nav-link active" aria-current="page" href="./Service.html"
+                                style="margin-top: 0px;"><b>服務內容</b></a>
+                        </div>
+                        <div class="nav-item nav-hover" style="width: 100px; text-align: center; height: 100%;">
+                            <a class="nav-link active" aria-current="page" href="./Contact.html"
+                                style="margin-top: 0px;"><b>聯絡諮詢</b></a>
+                        </div>
+                        <div class="nav-item nav-hover" style="width: 100px; text-align: center; height: 100%;">
+                            <a class="nav-link active" aria-current="page" href="./Shop.html"
+                                style="margin-top: 0px;"><b>建材批售</b></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 往下推85px -->
+    <div style="height: 85px;"></div>
+
+    <!-- bootstrap: 輪播圖 -->
+    <!--               --slide: 推擠樣式    --carousel:輪播圖            --被指定id: #apple -->
+    <div class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500" id="apple"
+        style="width: 100%; margin: 0 auto;">
+        <div class="carousel-indicators" style="margin-bottom: 50px;">
+            <!-- --輪播底部按鈕          --指定id: #apple                                    --aria: 無障礙功能，aria-label="使用者名稱"，電腦會把"使用者名稱"讀出來 -->
+            <button type="button" data-bs-target="#apple" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#apple" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#apple" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <!-- --輪播圖片 -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./Product/Landscape/Landscape4.jpg">
+            </div>
+            <div class="carousel-item">
+                <img src="./Product/Landscape/Landscape2.jpg">
+            </div>
+            <div class="carousel-item">
+                <img src="./Product/Architect/Architect6.jpg">
+            </div>
+        </div>
+        <!-- --輪播圖控制按鈕                                            --指定id: #apple -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#apple" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#apple" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+        <h3 style="text-align:center;"><b>空間設計</b></h3>
+        <h3 style="text-align:center;"><b>Space Design</b></h3>
+    </div>
+
+    <!-- 視差內容 -->
+    <div class="bgimg-1">
+        <div class="caption">
+            <span class="Myborder" style="font-size: 20px;">Architectural Design</span>
+        </div>
+    </div>
+
+    <!-- 建築設計標題 -->
+    <div style="color: #777;background-color:white;text-align:center;padding:50px 50px;text-align: justify;">
+        <h3 style="text-align:center;"><b>建築設計</b></h3>
+        <p style="text-align:center;"><b>Architectural Design</b></p>
+
+        <!-- 建築設計內容 -->
+        <br>
+        <div style=" box-sizing: border-box; display: flex;">
+            <!-- class -->
+            <div class="row ArchitecturalImgCaseCase">
+                <!-- class -->
+                <div class="col-12 col-md-6 h-md-25 ArchitecturalImgCase" data-aos="fade-down" data-aos-duration="1500">
+                    <!-- class -->
+                    <img class="ArchitecturalImg" src="./Product/Architect/Architect2.jpg">
+                </div>
+                <!-- class -->
+                <div class="col-12 col-md-6 ArchitecturalContentCase" data-aos="fade-left" data-aos-duration="1200">
+                    <!-- class -->
+                    <div class="col-12 ArchitecturalContent">
+                        <br>
+                        <!-- class -->
+                        <h3 class="ArchitecturalContent-h3">
+                            現代極簡風格</h3>
+                        <br>
+                        <!-- class -->
+                        <p class="ArchitecturalContent-P">
+                            對於極為講求細節質感的客戶，本設計不以色彩花紋作為設計手法，而是皆以白色烤漆、黑玻、灰鏡、安格拉珍珠大理石、灰色調壁紙作為表面材，顯現出一體成型。
+                        </p>
+                        <!-- class -->
+                        <div id="ArchitecturalContentImgCase" class="ArchitecturalContentImgCase">
+                            <!-- class -->
+                            <img class="ArchitecturalContent-ImgOne" src="./index/椅子.png">
+                            <!-- class -->
+                            <img class="ArchitecturalContent-ImgTwo" src="./index/植栽.png">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+    </div>
+    </div>
+
+    <div class="bgimg-2">
+        <div class="caption">
+            <span class="Myborder"><span>Landscape
+                    Design</span></span>
+        </div>
+    </div>
+
+    <!-- 景觀設計標題 -->
+    <div style="color: #777;background-color:white;text-align:center;padding:50px 50px;text-align: justify;">
+        <h3 style="text-align:center;"><b>景觀設計</b></h3>
+        <p style="text-align:center;"><b>Landscape　Design</b></p>
+
+        <br>
+        <!-- 景觀設計內容 -->
+        <div style=" box-sizing: border-box; display: flex;">
+            <!-- class -->
+            <div class="row LandscapeImgCaseCase">
+                <!-- class -->
+                <div class="col-12 col-md-6 h-md-25 LandscapeContentCase" data-aos="fade-down-right" data-aos-duration="1500">
+                    <!-- class -->
+                    <div class="col-12 LandscapeContent">
+                        <br>
+                        <!-- class -->
+                        <h3 class="LandscapeContent-h3">
+                            自然生態共生共融</h3>
+                        <br>
+                        <!-- class -->
+                        <p class="LandscapeContent-P">
+                            建構完善的生態城市，打造綠色宜居環境，在公共景觀綠廊空間與休憩場域，引入自然綠意，塑造綠地、親水、親人的市民休閒遊憩活動空間。</p>
+                        <!-- class -->
+                        <div id="LandscapeContentImgCase" class="LandscapeContentImgCase" >
+                            <!-- class -->
+                            <img class="LandscapeContent-ImgTwo" src="./index/南非天堂鳥.png">
+                        </div>
+                    </div>
+                </div>
+                <!-- image - class -->
+                <div class="col-12 col-md-6 h-md-25 LandscapeImgCase" data-aos="fade-up-left" data-aos-duration="1200">
+                    <!-- class -->
+                    <img class="LandscapeImg" src="./img/6.jpg">
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </div>
+
+    <div class="bgimg-3">
+        <div class="caption">
+            <span class="Myborder" style="background-color:transparent;font-size:25px;color: #f7f7f7;">Interior
+                Design</span>
+        </div>
+    </div>
+
+    <!-- 室內設計標題 -->
+    <div style="color: #777;background-color:white;text-align:center;padding:50px 50px;text-align: justify;">
+        <h3 style="text-align:center;"><b>室內設計</b></h3>
+        <p style="text-align:center;"><b>Interior　Design</b></p>
+
+        <!-- 室內設計內容 -->
+        <br>
+        <div style=" box-sizing: border-box; display: flex;">
+            <!-- class -->
+            <div class="row InteriorImgCaseCase">
+                <!-- class -->
+                <div class="col-12 col-md-6 h-md-25 InteriorImgCase"  data-aos="zoom-in" data-aos-duration="1500">
+                    <!-- class -->
+                    <img class="InteriorImg" src="./index/日式簡約格局 - 資料來源 - 陳一鳳建築師.jpg">
+                </div>
+                <!-- class -->
+                <div class="col-12 col-md-6 InteriorContentCase" data-aos="zoom-in-up" data-aos-duration="1200">
+                    <!-- class -->
+                    <div class="col-12 InteriorContent">
+                        <br>
+                        <!-- class -->
+                        <h3 class="InteriorContent-h3">
+                            日式簡約格局</h3>
+                        <br>
+                        <!-- class -->
+                        <p class="InteriorContent-P">
+                            日式現代簡約風，展現室內空間與自然結合，利用木質地板、實木格柵與各式石板這些天然系材料，構築簡約樸實的風格，讓空間視覺上寬敞舒適。</p>
+                        <!-- class -->
+                        <div id="InteriorContentImgCase" class="InteriorContentImgCase">
+                            <!-- class -->
+                            <img class="InteriorContent-ImgOne" src="./index/木色設計師椅.png">
+                            <!-- class -->
+                            <img class="InteriorContent-ImgTwo" src="./index/落地立燈.png">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+    </div>
+
+    <div class="bgimg-4">
+        <div class="caption">
+            <span class="Myborder">N　e　w　s</span>
+        </div>
+    </div>
+
+    <!-- 最新消息標題 -->
+    <div
+        style="color: #777;background-color:rgb(255, 255, 255);text-align:center; padding:50px 60px; text-align: justify;">
+        <h3 style="text-align:center;"><b>最新消息</b></h3>
+        <p style="text-align:center;"><b>News</b></p>
+
+        <!-- 最新消息內容 -->
+        <div class="row" style=" background-color: rgb(255, 255, 255); box-sizing: border-box; text-align: center;">
+            <!-- 第一則新聞 -->
+            <div class="col-12 col-md-4 col-sm-6 h-sm-50" div data-aos="zoom-in-down" data-aos-duration="1100">
+                <div class="card MyCard" style="width: 100%; margin: 10px;">
+                    <a href="https://art.ltn.com.tw/article/breakingnews/4056985">
+                        <img src="./index/News/第一則新聞/4056985_6.jpg" class="card-img-top"
+                            style=" max-height: 250px; object-fit: cover;">
+                    </a>
+                    <div class="card-body">
+                        <a href="https://art.ltn.com.tw/article/breakingnews/4056985"
+                            style="text-decoration: none; color: #777;">
+                            <h5 class="card-title NewsTitleEllipsis" style="text-align: justify;"><b>日本建築師藤本壯介操刀
+                                    台南最新景點「南埕衖事」開張</b></h5>
+                            <hr>
+                            <p class="card-text NewsTextEllipsis" style="text-align: justify;">
+                                台南市中西區近期出現一幢引人矚目的建築，為由國際知名建築大師藤本壯介設計的「南埕衖事」，將平面巷弄化體驗，化為立體錯落的空間，為這棟超過一甲子的老建築重生，開幕後即引起建築迷前往，在八層樓的空間裡，以體感貼近台南的曲徑、城市場域的介面。
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 第二則新聞 -->
+            <div class="col-12 col-md-4 col-sm-6 h-sm-50" div data-aos="zoom-in-down" data-aos-duration="1100">
+                <div class="card MyCard" style="width: 100%; margin: 10px;">
+                    <a href="https://udn.com/news/story/7323/6969579">
+                        <img src="./index/News/第二則新聞/167633643190847_P20188700.webp" class="card-img-top"
+                            style=" max-height: 250px; object-fit: cover;">
+                    </a>
+                    <div class="card-body">
+                        <a href="https://udn.com/news/story/7323/6969579" style="text-decoration: none; color: #777;">
+                            <h5 class="card-title NewsTitleEllipsis" style="text-align: justify;"><b>昔黃金歲月日本礦業株式會社總辦公室
+                                    大地館重現風華</b></h5>
+                            <hr>
+                            <p class="card-text NewsTextEllipsis" style="text-align: justify;">
+                                新北市立黃金博物館去年底開放參觀的大地館，曾經是日本礦業株式會社的總辦公室，經過木造、磚造、混凝土造等不同時期的工法整建至今，有近百年歷史。從大地館1、2樓的窗戶形式、室內階梯扶手等仍可窺見昔日建築元素。
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 第三則新聞 -->
+            <div class="col-12 col-md-4 col-sm-6 h-sm-50" div data-aos="zoom-in-down" data-aos-duration="1100">
+                <div class="card MyCard" style="width: 100%; margin: 10px;">
+                    <a href="https://news.ltn.com.tw/news/life/breakingnews/3694105">
+                        <img src="./index/News/第三則新聞/3694105_1_1.jpg" class="card-img-top"
+                            style=" max-height: 250px; object-fit: cover;">
+                    </a>
+                    <div class="card-body">
+                        <a href="https://news.ltn.com.tw/news/life/breakingnews/3694105"
+                            style="text-decoration: none; color: #777;">
+                            <h5 class="card-title NewsTitleEllipsis" style="text-align: justify;"><b>英國青年建築遠見設計競賽
+                                    聯大建築設計師生奪雙料首獎</b></h5>
+                            <hr>
+                            <p class="card-text NewsTextEllipsis" style="text-align: justify;">
+                                台灣之光！國立聯合大學建築系學生參與國際賽事再傳捷報，今年「英國2021青年建築遠見設計競賽」，聯合大學建築學生翁葉儒、陳宥豪分別奪得景觀設計獎最高榮譽的Winner大獎、城市設計獎第1名首獎。
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 第四則新聞 -->
+            <div class="col-12 col-md-4 col-sm-6 h-sm-50" div data-aos="zoom-in-down" data-aos-duration="1100">
+                <div class="card MyCard" style="width: 100%; margin: 10px;">
+                    <a href="https://art.ltn.com.tw/article/breakingnews/4056985">
+                        <img src="./index/News/第四則新聞/phpvRe6cG.jpg" class="card-img-top"
+                            style=" max-height: 250px; object-fit: cover;">
+                    </a>
+                    <div class="card-body">
+                        <a href="https://art.ltn.com.tw/article/breakingnews/4056985"
+                            style="text-decoration: none; color: #777;">
+                            <h5 class="card-title NewsTitleEllipsis" style="text-align: justify;"><b>中國天津「網紅」圖書館極美
+                                    全世界書蟲驚豔</b></h5>
+                            <hr>
+                            <p class="card-text NewsTextEllipsis" style="text-align: justify;">
+                                不少愛書人最大的夢想就是「爬書山」，悠遊在滿坑滿谷的書叢間、隨時隨地找到中意的書本後席地而坐、百讀不倦；而中國天津上個月新開幕的「天津濱海圖書館」可謂打造了書蟲夢寐以求之地，館內以充滿未來感的流線型書架直通近30公尺高的屋頂、數量龐大的藏書令人眼花撩亂；館外看起來則像一隻凝望遠方的眼，「眼珠」是個可變色的多功能演講廳。
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 第五則新聞 -->
+            <div class="col-12 col-md-4 col-sm-6 h-sm-50" div data-aos="zoom-in-down" data-aos-duration="1100">
+                <div class="card MyCard" style="width: 100%; margin: 10px;">
+                    <a href="https://money.udn.com/money/story/10860/6967881">
+                        <img src="./index/News/第五則新聞/167626224793746_P20183191.jpg" class="card-img-top"
+                            style=" max-height: 250px; object-fit: cover;">
+                    </a>
+                    <div class="card-body">
+                        <a href="https://money.udn.com/money/story/10860/6967881"
+                            style="text-decoration: none; color: #777;">
+                            <h5 class="card-title NewsTitleEllipsis" style="text-align: justify;"><b>跨界融合 將書法融入建築
+                                    在AI時代開創全新藝術</b></h5>
+                            <hr>
+                            <p class="card-text NewsTextEllipsis" style="text-align: justify;">
+                                當今ChatGPT展現其跨多領域的強大能力，像是寫小說、寫論文、寫報告、寫計畫書、寫信、約會建議、解題、翻譯潤稿、寫詩歌、編程、摘要總結、技術顧問、行銷方案與策略、廣告文宣、新聞編輯等。
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 第六則新聞 -->
+            <div class="col-12 col-md-4 col-sm-6 h-sm-50" div data-aos="zoom-in-down" data-aos-duration="1100">
+                <div class="card MyCard" style="width: 100%; margin: 10px;">
+                    <a href="https://reading.udn.com/read/story/122750/6966082?from=udn_ch1014_toppush_index">
+                        <img src="./index/News/第六則新聞/167634500776015_P20176634.jpg" class="card-img-top"
+                            style=" max-height: 250px; object-fit: cover;">
+                    </a>
+                    <div class="card-body">
+                        <a href="https://reading.udn.com/read/story/122750/6966082?from=udn_ch1014_toppush_index"
+                            style="text-decoration: none; color: #777;">
+                            <h5 class="card-title NewsTitleEllipsis" style="text-align: justify;"><b>蔡明亮、聶永真等聯手
+                                    田中央「超出建築」當代館展出</b></h5>
+                            <hr>
+                            <p class="card-text NewsTextEllipsis" style="text-align: justify;">
+                                台北當代藝術館二樓出現一座架高階梯平台，觀眾可隨著導引路徑自然遊走，登高俯瞰整個展場或是沉浸觀賞七位藝術家與建築團隊「田中央」的影片、模型、作品等，彼此穿越逐步互相滲透展開新的關係，呼應「Together」共同生活的社群本質。
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bgimg-5">
+        <div class="caption">
+            <span class="Myborder"><span>Conscientious</span></span>
+        </div>
+    </div>
+
+    <!-- 頁尾資訊欄 -->
+    <h3 style="text-align:left; margin: 50px; text-align: center;"><b>從景觀、建築到室內各別設計 & 整合設計</b></h3>
+    <div class=""
+        style=" height: 450px; background-image: url(./index/頁尾資訊欄/about_pic.jpg); background-position: center; background-repeat: no-repeat; background-size: cover; box-sizing: border-box; border-radius: 0px; overflow:hidden;" data-aos="zoom-out" data-aos-duration="1100">
+        <div class="row" style="max-height: max-content; height: 100%;">
+            <div class="col-12 col-md-6" style="height: 100%;" data-aos="fade-up" data-aos-duration="2000">
+                <div class="row" style="height: 100%;">
+                    <div class="col-12"
+                        style=" height: 100%; text-align: justify; padding-right: 15px; padding-left: 15px; background-color: rgb(51, 51, 51, 0.2);">
+                        <br><br><br>
+                        <p style="font-size: 16px; margin: 30px; color: #fff;">
+                            結合多年中大型工程顧問公司及建築師事務所以及室內設計公司之實務經驗，具備整合多元空間設計的專業能力，多元化專業團隊共同合作。以人為本，將人文、藝術以及最重要的與〝人的生活節奏〞緊密結合，量身打造出專屬設計與風格。
+                        </p>
+                        <p style="font-size: 16px; margin: 30px; color: #fff;">
+                            空間不僅是居住或使用的空間容器，而是由內到外富含藝術涵養與生活便利的空間美學，創造出美好的生活與空間的對話狀態，產生更為舒適與滿足的空間氛圍。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <!-- 我只是來占空間 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 頁尾 -->
+    <div
+        style="color:#848484;background-color:rgb(224, 224, 224, 0.5);text-align:center;padding:50px 50px;text-align: justify;">
+
+        <!-- 地圖&聯絡方式 -->
+        <div class="row">
+            <div class="col-12 col-md-6 h-md-25">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.428944344554!2d120.6347276!3d24.156684999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693de8e0f265f3%3A0x89046fd19e171255!2z5Lit6I-v6Zu75L-h5a246Zmi6buO5piO5pyD6aSo!5e0!3m2!1szh-TW!2stw!4v1676133649747!5m2!1szh-TW!2stw"
+                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div style="font-size: 14px; text-align: center;">
+                    <p style="margin-top: 5px;">建築設計 | 室內裝修 | 景觀規劃 | 危老建築都更 | 土地開發興建 | 老屋重新翻修</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="row">
+                    <div class="col-12"
+                        style="text-align: justify; padding-right: 15px; text-align: center; margin-top: 5px;">
+                        <br>
+                        <h6 style="text-align: center; white-space: nowrap">統編：04-2327-3572</h6>
+                        <h6 style="text-align: center; white-space: nowrap">電話：04-2326-5860</h6>
+                        <h6 style="text-align: center; white-space: nowrap">手機：0988664422</h6>
+                        <h6 style="text-align: center; white-space: nowrap">信箱：Sitdownplz0222@gmail.com.tw</h6>
+                        <h6 style="text-align: center; white-space: nowrap">地址：台中市南屯區黎明路二段658號</h6>
+                        <br>
+                        <i id="icon" class="bi bi-line"
+                            style="font-size: 40px; margin-right: 15px; cursor: pointer;"></i>
+                        <i id="icon" class="bi bi-facebook"
+                            style="font-size: 40px; margin-right: 15px; cursor: pointer;"></i>
+                        <i id="icon" class="bi bi-twitter"
+                            style="font-size: 40px; margin-right: 15px; cursor: pointer;"></i>
+                        <i id="icon" class="bi bi-youtube"
+                            style="font-size: 40px; margin-right: 15px; cursor: pointer;"></i>
+                        <i id="icon" class="bi bi-instagram" style="font-size: 40px; cursor: pointer;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOP至頂 -->
+    <div class="demo">
+        <!-- <a>雖然是行內元素，但他是特別的存在 -->
+        <div class="MyTop"><a href="#"><img src="./img/TOP.png"></a>
+        </div>
+    </div>
+    <script src="./JavaScript/index.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
