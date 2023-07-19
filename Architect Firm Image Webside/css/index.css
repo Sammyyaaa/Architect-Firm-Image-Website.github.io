@@ -59,6 +59,12 @@
     scale: 117%;
 }
 
+@media (max-width: 767px) {
+    .navbar-nav {
+      padding-right: 35%;
+    }
+  }
+
 /* 輪播圖 */
 .carousel-item>img {
     width: 100%;
