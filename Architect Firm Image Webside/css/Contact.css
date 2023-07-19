@@ -195,6 +195,20 @@ i:hover {
     }
 }
 
+/* 表單左右寬度響應式 */
+.contactPaddingSpace {
+    color: #777; 
+    text-align:center; 
+    padding: 50px; 
+    text-align: justify;
+}
+
+@media screen and (min-width: 767px) {
+    .contactPaddingSpace {
+        padding: 50px 300px;
+    }
+}
+
 /* 表單外框陰影樣式 */
 .MyContact {
     box-shadow: rgb(224, 224, 224) 0px 2px 5px 3px;
