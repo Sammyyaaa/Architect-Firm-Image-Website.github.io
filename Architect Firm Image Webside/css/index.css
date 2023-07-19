@@ -60,7 +60,7 @@
 }
 
 @media (max-width: 767px) {
-    .navbar-nav {
+    .navbar-position {
       padding-right: 35%;
     }
 }
