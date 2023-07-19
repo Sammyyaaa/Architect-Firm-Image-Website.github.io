@@ -59,7 +59,7 @@
     scale: 117%;
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .navbar-position {
       padding-right: 35%;
     }
