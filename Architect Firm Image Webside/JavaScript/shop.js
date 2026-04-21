@@ -7,6 +7,13 @@ function ShopPrice() {
   document.getElementById("ShopTotal").innerText = z;
 }
 
+// 左側欄連結防止重新整理
+document.querySelectorAll('.LeftBarcontent a').forEach(function (link) {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+  });
+});
+
 // 商品卡片點擊開啟購買視窗
 document.querySelectorAll(".MYcardALink").forEach(function (link) {
   link.addEventListener("click", function (e) {
