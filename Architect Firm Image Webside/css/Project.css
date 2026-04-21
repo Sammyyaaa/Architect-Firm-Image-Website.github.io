@@ -237,15 +237,11 @@ i:hover {
 
 /* 電腦顯示-點擊圖片覆蓋效果 */
 #MyBackgroundImg {
-    width: 60vw;
-    /* height: 95vh; */
-    margin: 0 auto;
-    display: flex;
-    /* margin-top: 20vh; */
-    border: 10px solid white;
-    border-radius: 10px;
+    width: 95vw;
+    max-height: 85vh;
+    object-fit: contain;
     position: absolute;
-    top: 56.5%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -255,15 +251,11 @@ i:hover {
 /* 平板手機顯示-點擊圖片覆蓋效果 */
 @media only screen and (max-width: 768px) {
     #MyBackgroundImg {
-        width: 98vw;
-        /* height: 95vh; */
-        margin: 0 auto;
-        display: flex;
-        /* margin-top: 20vh; */
-        border: 10px solid white;
-        border-radius: 10px;
+        width: 95vw;
+        max-height: 85vh;
+        object-fit: contain;
         position: absolute;
-        top: 57%;
+        top: 55%;
         left: 50%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
