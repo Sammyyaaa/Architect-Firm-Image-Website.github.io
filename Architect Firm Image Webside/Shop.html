@@ -358,7 +358,7 @@
                 </div>
                 <div class="col-6 col-sm-4 col-md-4 col-lg-3">
                     <!-- 第一個商品 -->
-                    <a class="MYcardALink" href="" data-bs-toggle="modal" data-bs-target="#ShopButton">
+                    <a class="MYcardALink" href="">
                         <div class="Mycard" style="width: 100%; margin: 20px;">
                             <div class="MyCardcontainer">
                                 <img src="./Shop/新琦石(仿大理石板)/1F04黑鈦玟石.jpg" alt="Avatar"
@@ -878,36 +878,54 @@
     </div>
 
     <!-- 彈出視窗 -->
-    <form style="padding: 10px;">
-        <div class="modal fade" id="ShopButton">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <!-- 關閉按鈕 -->
-                        <button type="bottom" class="btn-close" data-bs-dismiss="modal"></button>
+    <div class="modal fade" id="ShopButton">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- 關閉按鈕 -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" style="text-align: center; padding: 10px;">
+                    <img id="ShopModalImg" src="./Shop/新琦石(仿大理石板)/1F04黑鈦玟石.jpg" style="width:200px; margin: 20px;">
+                    <h4><b id="ShopModalName">黑鈦玟石</b></h4>
+                    <span style="color:rgb(154, 68, 68); font-size: 23px;"><b>售價$ </b></span>
+                    <span id="ShopPrice"><b>1862</b></span>
+                    <hr>
+                    <label for="ShopInput">選擇數量：</label>
+                    <input onchange="ShopPrice()" type="number" value="0" min="0" id="ShopInput">
+                    <br><br>
+                    <div style="width: 100%; text-align: right; margin: 0 -6px;">
+                        <span>總金額：$ </span>
+                        <span id="ShopTotal"></span>
                     </div>
-                    <div class="modal-body" style="text-align: center; padding: 10px;">
-                        <img src="./Shop/新琦石(仿大理石板)/1F04黑鈦玟石.jpg" style="width:200px; margin: 20px;">
-                        <h4><b>黑鈦玟石</b></h4>
-                        <span style="color:rgb(154, 68, 68); font-size: 23px;"><b>售價$ </b></span>
-                        <span id="ShopPrice"><b>1862</b></span>
-                        <hr>
-                        <label for="ShopInput">選擇數量：</label>
-                        <input onchange="ShopPrice()" type="number" value="0" min="0" id="ShopInput">
-                        <br><br>
-                        <div style="width: 100%; text-align: right; margin: 0 -6px;">
-                            <span>總金額：$ </span>
-                            <span id="ShopTotal"></span>
-                            <!-- <span> 元</span> -->
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="ShopButton" type="submit">確認送出</button>
-                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="ShopButton" type="button" data-bs-dismiss="modal">確認送出</button>
                 </div>
             </div>
         </div>
-    </form>
+    </div>
+    <!-- 購物車 icon -->
+    <div id="CartIcon" onclick="openCart()" style="position: fixed; right: 5px; top: 20%; transform: translateY(-50%); z-index: 9999; cursor: pointer; background: white; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 12px rgba(0,0,0,0.25);">
+        <i class="bi bi-cart3" style="font-size: 26px; color: #555;"></i>
+        <span id="CartBadge" style="display: none; position: absolute; top: 2px; right: 2px; background: rgb(154,68,68); color: white; border-radius: 50%; width: 20px; height: 20px; font-size: 11px; text-align: center; line-height: 20px; font-weight: bold;"></span>
+    </div>
+
+    <!-- 購物車清單 offcanvas -->
+    <div class="offcanvas offcanvas-end" id="CartOffcanvas" tabindex="-1" style="width: 320px;">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title"><i class="bi bi-cart3" style="margin-right:6px;"></i>購物車</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body" style="padding-top: 10px;">
+            <div id="CartList"></div>
+            <hr>
+            <div style="text-align: right; font-size: 17px;">
+                <b>總計：$ <span id="CartTotal">0</span></b>
+            </div>
+        </div>
+    </div>
+
     <script src="./JavaScript/shop.js"></script>
 
 
